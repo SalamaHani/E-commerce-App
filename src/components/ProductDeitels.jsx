@@ -9,8 +9,6 @@ import ProductsReviews from "./ProductsReviews";
 import { SetRewive } from "./SetRewive";
 function ProductDeitels() {
   const product = useLoaderData();
-  console.log(product);
-
   const {
     id,
     name,

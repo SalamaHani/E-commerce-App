@@ -37,7 +37,7 @@ import { action as actionReviews } from "./components/SetRewive";
 import { action as actionforgetpass } from "./page/ForgotPassword";
 import { action as resetpass } from "./page/resetpassword";
 import ResetPassword from "./page/resetpassword";
-import ScrollToTopLayout from "./components/ScrollToTopLayout";
+import ScrollToTop from "./components/ScrollToTop";
 
 const queryClient = new QueryClient({
   defaultOptions: {

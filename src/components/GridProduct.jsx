@@ -13,6 +13,7 @@ function GridProduct() {
           {products.map((item) => {
             return (
               <motion.div
+                id={item.id}
                 key={item.id}
                 layout
                 initial={{ opacity: 0 }}

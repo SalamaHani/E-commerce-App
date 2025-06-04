@@ -9,12 +9,12 @@ import {
   DialogTrigger,
 } from "@/components/ui/dialog";
 import { Button } from "@/components/ui/button";
-import { Form, Router } from "react-router";
+import { Form } from "react-router";
 import { useState } from "react";
 import { useSelector } from "react-redux";
 import { toast } from "sonner";
 import { redirect } from "react-router";
-import { seterrorsmasge, handelreves } from "../features/User/userSlice";
+import { seterrorsmasge } from "../features/User/userSlice";
 import { customFetch } from "@/Util";
 // eslint-disable-next-line react-refresh/only-export-components
 export const action =
@@ -38,7 +38,6 @@ export const action =
         }
       );
       toast.success(respone.data.message);
-      store.dispatch(handelreves());
       return redirect(`/products/${params.IDProduct}`);
     } catch (error) {
       store.dispatch(seterrorsmasge(error.response.data.errors));
@@ -169,7 +168,9 @@ export function SetRewive() {
               <DialogClose asChild>
                 <Button variant="outline">Cancel</Button>
               </DialogClose>
-              <Button type="submit">Save changes</Button>
+              <DialogClose asChild>
+                <Button type="submit">Save changes</Button>
+              </DialogClose>
             </DialogFooter>
           </Form>
         </DialogContent>

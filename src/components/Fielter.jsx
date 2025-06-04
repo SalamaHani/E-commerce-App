@@ -5,42 +5,47 @@ import { formatPrice } from "../Util/index";
 import { Form, Link, useLoaderData } from "react-router";
 
 function Fielter() {
+  const Reviewe = Array.from({ length: 5 }, (_, index) => {
+    return index + 1;
+  });
   const { brands, categories, params } = useLoaderData();
-  const { search, category, brand, price, shipping } = params;
+  const { search, price, shipping } = params;
   const step = 1000;
   const minPrice = 0;
   const [selectedPrice, setSelectedPrice] = useState(price || minPrice);
   return (
     <Wrapper>
       <Form className="my-10 rounded-md px-8  bg-[#f2f2f2] dark:bg-gray-800 py-4 grid gap-x-4  gap-y-8 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 items-center">
-        <div className="relative dark:text-white">
-          <label htmlFor="search" className="label">
-            Sarch Products
-          </label>
-          <input
-            type="search"
-            placeholder=""
-            className=" w-full h-10  bg-white l dark:bg-gray-700 dark:text-gray-400 text-base font-normal shadow-xs text-gray-900  border border-gray-300 rounded-full placeholder-gray-400 focus:outline-none "
-            name="search"
-            defaultValue={search}
-          />
-          <div className="absolute right-0 top-3 flex h-full items-center dark:text-gray-400">
-            <button
-              type="submit"
-              className="search-icon p-2 m-1 rounded-full bg-black dark:bg-white"
-            >
-              <svg
-                stroke="currentColor"
-                fill="currentColor"
-                viewBox="0 0 512 512"
-                className="h-5 w-5 text-white dark:text-gray-700"
-                height="1em"
-                width="1em"
-                xmlns="http://www.w3.org/2000/svg"
+        <div>
+          <div className="relative form-control  dark:text-white mt-3">
+            <label htmlFor="search" className="label">
+              Sarch Products
+            </label>
+            <input
+              type="search"
+              placeholder=""
+              className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-black focus:border-black block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-white dark:focus:border-white"
+              name="search"
+              defaultValue={search}
+            />
+            <div className="absolute right-0 top-3 flex h-full items-center dark:text-gray-400">
+              <button
+                type="submit"
+                className="search-icon p-2.5  rounded-md bg-black dark:bg-white"
               >
-                <path d="M456.69 421.39 362.6 327.3a173.81 173.81 0 0 0 34.84-104.58C397.44 126.38 319.06 48 222.72 48S48 126.38 48 222.72s78.38 174.72 174.72 174.72A173.81 173.81 0 0 0 327.3 362.6l94.09 94.09a25 25 0 0 0 35.3-35.3zM97.92 222.72a124.8 124.8 0 1 1 124.8 124.8 124.95 124.95 0 0 1-124.8-124.8z"></path>
-              </svg>
-            </button>
+                <svg
+                  stroke="currentColor"
+                  fill="currentColor"
+                  viewBox="0 0 512 512"
+                  className="h-5 w-5 text-white dark:text-gray-700"
+                  height="1em"
+                  width="1em"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path d="M456.69 421.39 362.6 327.3a173.81 173.81 0 0 0 34.84-104.58C397.44 126.38 319.06 48 222.72 48S48 126.38 48 222.72s78.38 174.72 174.72 174.72A173.81 173.81 0 0 0 327.3 362.6l94.09 94.09a25 25 0 0 0 35.3-35.3zM97.92 222.72a124.8 124.8 0 1 1 124.8 124.8 124.95 124.95 0 0 1-124.8-124.8z"></path>
+                </svg>
+              </button>
+            </div>
           </div>
         </div>
         <div>
@@ -52,7 +57,7 @@ function Fielter() {
               name="category"
               id="category"
               className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-black focus:border-black block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-white dark:focus:border-white"
-              defaultValue={category}
+              defaultValue="all"
             >
               {categories.map((item) => {
                 return (
@@ -73,7 +78,7 @@ function Fielter() {
               name="brand"
               id="brand"
               className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-black focus:border-black block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-white dark:focus:border-white"
-              defaultValue={brand}
+              defaultValue="all"
             >
               {brands.map((item) => {
                 return (
@@ -85,7 +90,25 @@ function Fielter() {
             </select>
           </div>
         </div>
-        <div></div>
+        <div>
+          <div className="form-control  dark:text-white mt-3">
+            <label htmlFor="company" className="label">
+              Retimg
+            </label>
+            <select
+              className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-black focus:border-black block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-white dark:focus:border-white"
+              defaultValue="1"
+            >
+              {Reviewe.map((item) => {
+                return (
+                  <option className="dark:bg-gray-700" key={item} value={item}>
+                    {item}
+                  </option>
+                );
+              })}
+            </select>
+          </div>
+        </div>
         <div>
           <div>
             <div className="form-control  dark:text-white">

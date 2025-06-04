@@ -4,6 +4,7 @@ import { Outlet, useNavigation } from "react-router";
 import Hedaruser from "../components/Hedaruser";
 import Footer from "../components/Footer";
 import IsLoding from "../components/IsLoding";
+import ScrollToTop from "@/components/ScrollToTop";
 
 function Home() {
   const navddtion = useNavigation();
@@ -16,6 +17,7 @@ function Home() {
         <IsLoding />
       ) : (
         <>
+          <ScrollToTop />
           <Outlet />
           <Footer />
         </>
