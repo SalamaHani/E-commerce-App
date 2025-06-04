@@ -65,9 +65,9 @@ function UserProfitonal() {
               </div>
             </div>
           </div>
-          <s>
+          <div>
             <ModeEditP />
-          </s>
+          </div>
         </div>
       </div>
     </>

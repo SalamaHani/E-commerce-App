@@ -37,6 +37,7 @@ import { action as actionReviews } from "./components/SetRewive";
 import { action as actionforgetpass } from "./page/ForgotPassword";
 import { action as resetpass } from "./page/resetpassword";
 import ResetPassword from "./page/resetpassword";
+import ScrollToTopLayout from "./components/ScrollToTopLayout";
 
 const queryClient = new QueryClient({
   defaultOptions: {
@@ -66,7 +67,7 @@ const Router = createBrowserRouter([
         path: "products",
         element: <Products />,
         errorElement: <Error />,
-        loader: loaderproduact(queryClient),
+        loader: loaderproduact(),
       },
       {
         path: "Products/:IDProduct",
@@ -98,6 +99,7 @@ const Router = createBrowserRouter([
       },
     ],
   },
+
   {
     path: "/Login",
     element: <Login />,

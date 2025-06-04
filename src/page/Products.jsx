@@ -5,33 +5,35 @@ import ContenerProduct from "../components/ContenerProduct";
 import { Outlet } from "react-router";
 import Compelxpagination from "../components/Compelxpagination";
 const url = "/products";
-const AllProductsQuery = (queryParams) => {
-  const { search, category, brand, price, shipping } = queryParams;
-  return {
-    queryKey: [
-      "products",
-      search ?? "",
-      category ?? "all",
-      brand ?? "all",
-      price ?? 0,
-      shipping ?? false,
-    ],
-    queryFn: () =>
-      customFetch(url, {
-        params: queryParams,
-      }),
-  };
-};
+// const AllProductsQuery = (queryParams) => {
+//   const { search, category, brand, price, shipping } = queryParams;
+//   return {
+//     queryKey: [
+//       "products",
+//       search ?? "",
+//       category ?? "all",
+//       brand ?? "all",
+//       price ?? 0,
+//       shipping ?? false,
+//     ],
+//     queryFn: () =>
+//       customFetch(url, {
+//         params: queryParams,
+//       }),
+//   };
+// };
 
 // eslint-disable-next-line react-refresh/only-export-components
 export const loader =
-  (queryClient) =>
+  () =>
   async ({ request }) => {
     const params = Object.fromEntries([
       ...new URL(request.url).searchParams.entries(),
     ]);
 
-    const respose = await queryClient.ensureQueryData(AllProductsQuery(params));
+    const respose = await customFetch(url, {
+      params: params,
+    });
     const products = respose.data.data;
     const brands = respose.data.brands;
     const categories = respose.data.categories;

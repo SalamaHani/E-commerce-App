@@ -8,8 +8,8 @@ function Fielter() {
   const { brands, categories, params } = useLoaderData();
   const { search, category, brand, price, shipping } = params;
   const step = 1000;
-  const maxPrice = 100000;
-  const [selectedPrice, setSelectedPrice] = useState(price || maxPrice);
+  const minPrice = 0;
+  const [selectedPrice, setSelectedPrice] = useState(price || minPrice);
   return (
     <Wrapper>
       <Form className="my-10 rounded-md px-8  bg-[#f2f2f2] dark:bg-gray-800 py-4 grid gap-x-4  gap-y-8 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 items-center">
@@ -85,27 +85,7 @@ function Fielter() {
             </select>
           </div>
         </div>
-        <div>
-          {/* <div className="form-control  dark:text-white mt-3">
-            <label htmlFor="company" className="label">
-              sort by
-            </label>
-            <select
-              name="order"
-              id="order"
-              className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-black focus:border-black block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-white dark:focus:border-white"
-              defaultValue={order}
-            >
-              {size.map((item) => {
-                return (
-                  <option className="dark:bg-gray-700" key={item} value={item}>
-                    {item}
-                  </option>
-                );
-              })}
-            </select>
-          </div> */}
-        </div>
+        <div></div>
         <div>
           <div>
             <div className="form-control  dark:text-white">
@@ -121,7 +101,7 @@ function Fielter() {
                   type="range"
                   name="price"
                   min={0}
-                  max={maxPrice}
+                  max={10000}
                   value={selectedPrice}
                   onChange={(e) => setSelectedPrice(e.target.value)}
                   className="range range-neutral dark:range dark:bg-gray-700 mt-6 "
@@ -131,7 +111,7 @@ function Fielter() {
               <div className="w-full flex justify-between  dark:text-white text-xs px-2 mt-5">
                 <span className="font-bold text-md">0</span>
                 <span className="font-bold text-md">
-                  Max : {formatPrice(maxPrice)}
+                  Max : {formatPrice(minPrice)}
                 </span>
               </div>
             </div>
