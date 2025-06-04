@@ -65,7 +65,7 @@ export function SetRewive() {
         </Button>
       </DialogTrigger>
       <Form method="POST" encType="multipart/form-data">
-        <DialogContent className="sm:max-w-[725px]">
+        <DialogContent className="sm:max-w-[725px] dark:bg-gray-900">
           <DialogHeader>
             <DialogTitle> Add a Review</DialogTitle>
             <DialogDescription>
