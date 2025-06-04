@@ -4,15 +4,23 @@ import { addItem, addFavoritesItem } from "../features/Cart/cartSlice";
 import { useState } from "react";
 import { generatequantityOptions, formatPrice } from "../Util";
 import Reivwe from "./Reivwe";
-import SetReviw from "./SetReviw";
-import { handelreves } from "../features/User/userSlice";
-import { useSelector } from "react-redux";
-import ProductReviews from "./ProductReviews";
+
+import ProductsReviews from "./ProductsReviews";
+import { SetRewive } from "./SetRewive";
 function ProductDeitels() {
-  const { product, Reviews } = useLoaderData();
+  const product = useLoaderData();
   console.log(product);
 
-  const { id, name, brand, description, image, price, average_rating } = {
+  const {
+    id,
+    name,
+    brand,
+    description,
+    image,
+    price,
+    average_rating,
+    reviews,
+  } = {
     ...product,
   };
   const [quantity, setquantity] = useState(1);
@@ -36,11 +44,6 @@ function ProductDeitels() {
   const handeladdfevaret = () => {
     dicpatch(addFavoritesItem({ product: cartProduct }));
   };
-  const dispatch = useDispatch();
-  const handelclose = () => {
-    dispatch(handelreves());
-  };
-  const isReview = useSelector((state) => state.userState.isReviewUser);
 
   return (
     <>
@@ -186,17 +189,9 @@ function ProductDeitels() {
                 </div>
               </div>
             </div>
-            <button
-              type="button"
-              onClick={handelclose}
-              className="flex md:mb-0 mb-4 w-[50%]  items-center mt-5 md:mt-0 justify-center py-2.5 px-5 text-sm font-medium text-white focus:outline-none bg-black rounded-lg border border-gray-200 hover:bg-gray-100 hover:text-black focus:z-10 focus:ring-4 focus:ring-gray-100 dark:focus:ring-gray-700 dark:bg-gray-800 dark:text-gray-400 dark:border-gray-600 dark:hover:text-white dark:hover:bg-gray-700"
-              role="button"
-            >
-              Write a Customer review
-            </button>
           </div>
-          {isReview ? <SetReviw /> : null}
-          <ProductReviews Reivws={Reviews} />
+          <SetRewive />
+          <ProductsReviews reviews={reviews} />
         </div>
       </section>
     </>

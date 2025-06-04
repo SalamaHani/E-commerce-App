@@ -1,16 +1,19 @@
 import ReviewCard from "./ReviewCard";
-
-async function ProductReviews({ Reivws }) {
+function ProductsReviews({ reviews }) {
+  if (reviews.length == 0) {
+    return null;
+  }
   return (
     <div className="mt-16">
       <div className="grid md:grid-cols-2 gap-8 my-8">
-        {Reivws.map((review) => {
-          const { comment, rating, authorImageUrl, authorName } = review;
+        {reviews.map((review) => {
+          const { comment, rating, author_name } = review;
+          const user = review.user != null ? review.user : null;
           const reviewInfo = {
             comment,
             rating,
-            image: authorImageUrl,
-            name: authorName,
+            author_name,
+            user,
           };
           return <ReviewCard key={review.id} reviewInfo={reviewInfo} />;
         })}
@@ -18,4 +21,4 @@ async function ProductReviews({ Reivws }) {
     </div>
   );
 }
-export default ProductReviews;
+export default ProductsReviews;

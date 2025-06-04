@@ -33,7 +33,7 @@ import ForgotPassword from "./page/ForgotPassword";
 import Profile from "./page/Profile";
 import { loder as lodergetuserdata } from "./page/Profile";
 import { action as ActionEditproifle } from "./components/ModeEditP";
-import { action as actionReviews } from "./page/SingelProduct";
+import { action as actionReviews } from "./components/SetRewive";
 import { action as actionforgetpass } from "./page/ForgotPassword";
 import { action as resetpass } from "./page/resetpassword";
 import ResetPassword from "./page/resetpassword";

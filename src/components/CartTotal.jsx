@@ -2,7 +2,7 @@ import React from "react";
 import { useSelector } from "react-redux";
 import { formatPrice } from "../Util";
 import { Link } from "react-router";
-import { DialogDemo } from "./DialogDemo";
+import Payments from "./Payments";
 
 function CartTotal() {
   const Totalquantity = useSelector((state) => state.cartState);
@@ -53,7 +53,7 @@ function CartTotal() {
             </dl>
           </div>
 
-          <DialogDemo/>
+          <Payments />
 
           <div className="flex items-center justify-center gap-2">
             <span className="text-sm font-normal text-gray-500 dark:text-gray-400">

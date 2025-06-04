@@ -56,7 +56,7 @@ export const action =
       );
       store.dispatch(toogelModeleidt());
       store.dispatch(UpdateDatauser(respones.data));
-      console.log(request);
+      return redirect("/Profile");
     } catch (error) {
       store.dispatch(seterrorsmasge(error.response.data.errors));
       toast.error(error.response.data.message);
@@ -107,7 +107,7 @@ function ModeEditP() {
           </Button>
         </DialogTrigger>
         <Form method="POST">
-          <DialogContent className="sm:max-w-[625px] dark:bg-gray-900">
+          <DialogContent  className="sm:max-w-[625px] dark:bg-gray-900">
             <DialogHeader>
               <DialogTitle>Edit profile</DialogTitle>
               <DialogDescription>

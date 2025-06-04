@@ -3,7 +3,6 @@ import Model from "./Model";
 import { setstring } from "../Util";
 
 import { useLoaderData } from "react-router";
-import { DialogDemo } from "./DialogDemo";
 import ModeEditP from "./ModeEditP";
 function UserData() {
   const userData = useLoaderData();
