@@ -149,7 +149,7 @@ function Header() {
           ) : (
             ""
           )}
-          <div className="w-40 flex items-center justify-between space-x-7 lg:space-x-14">
+          <div className="w-40 lg:flex items-center justify-between space-x-7 hidden  lg:space-x-14">
             <Link to="/" className="-m-1.5 p-1.5">
               <span className="sr-only">Your Company</span>
               <img

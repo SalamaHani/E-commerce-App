@@ -7,7 +7,6 @@ import { useState } from "react";
 // eslint-disable-next-line no-unused-vars
 import { motion } from "motion/react";
 function CartItem(item) {
-  console.log(item);
   const { cartID, brand, image, price, quantity, name } = item;
   const [setValue] = useState(quantity);
   const dicpatch = useDispatch();

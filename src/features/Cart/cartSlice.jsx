@@ -1,4 +1,5 @@
 import { createSlice } from "@reduxjs/toolkit";
+import { Type } from "lucide-react";
 import { toast } from "sonner";
 
 // import { action } from "../../page/Regeiser";
