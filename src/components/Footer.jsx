@@ -88,7 +88,7 @@ function Footer() {
               <li className="w-10 h-10 bg-white hover:bg-black hover:text-white dark:bg-gray-900 dark:hover:bg-white dark:hover:text-black rounded-full  flex items-center justify-center">
                 <a
                   aria-label="linkedin"
-                  href="https://www.linkedin.com/salama-hani-8a31b6270?utm_source=share&utm_cam-paign=share_via&utm_content=profile&utm_medium=ios=app"
+                  href="https://www.linkedin.com/in/salama-hani-8a31b6270/?trk=public-profile-join-page"
                   target="_blank"
                   rel="noopener noreferrer nofollow"
                 >
@@ -109,7 +109,7 @@ function Footer() {
               <li className="w-10 h-10 bg-white hover:bg-black hover:text-white dark:bg-gray-900 dark:hover:bg-white dark:hover:text-black rounded-full  flex items-center justify-center">
                 <a
                   aria-label="github"
-                  href="https://github.com/themefisher/astrofront"
+                  href="https://github.com/SalamaHani"
                   target="_blank"
                   rel="noopener noreferrer nofollow"
                 >
