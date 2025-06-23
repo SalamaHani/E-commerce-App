@@ -3,12 +3,12 @@ import ContenerProduct from "../components/ContenerProduct";
 import CartItems from "../components/CartItems";
 import GridProductF from "../components/GridProductF";
 import { useSelector } from "react-redux";
-import { useNavigate } from "react-router";
+import EmptyCart from "@/components/EmptyCart";
 
 function Favorites() {
   const Favorites = useSelector((state) => state.cartState.Favorites);
-  const navget = useNavigate();
-  if (Favorites.length == 0) return navget("/");
+  if (Favorites.length == 0)
+    return <EmptyCart Titel={"No Favorites products"} />;
   return (
     <div className="container py-20">
       <h2 className="text-xl font-semibold text-gray-900 mb-5 dark:text-white sm:text-2xl">

@@ -1,11 +1,13 @@
-
 # 🛒 E-Commerce App
 
 A modern, full-stack E-Commerce application built with **React.js** frontend (Vite) and **Laravel PHP** backend.
+![alt text](image.png)
+![alt text](image-1.png)
 
 ## ⚡️ Features
 
 ### 🧑‍💻 Frontend (React)
+
 - ⚡️ Vite for fast builds
 - 🧭 React Router 6.4+ with loaders/actions
 - 📦 Redux Toolkit (RTK) for global state
@@ -15,6 +17,7 @@ A modern, full-stack E-Commerce application built with **React.js** frontend (Vi
 - 🔐 Auth, Cart, Checkout, Product Filters, etc.
 
 ### 🔧 Backend (Laravel)
+
 - 🧬 RESTful API built in Laravel 10+
 - 🔐 JWT Auth or Sanctum
 - 🗃️ MySQL or PostgreSQL DB
@@ -84,16 +87,16 @@ php artisan serve
 
 ## 🧪 Tech Stack
 
-| Layer       | Tool                    |
-|-------------|-------------------------|
-| Frontend    | React.js + Vite         |
-| Routing     | React Router 6.4+       |
-| State       | Redux Toolkit + React Query |
-| Styling     | Tailwind CSS + Shadcn UI |
-| API Client  | Axios                   |
-| Backend     | Laravel PHP (REST API)  |
-| Auth        | Laravel Sanctum / JWT   |
-| DB          | MySQL / PostgreSQL      |
+| Layer      | Tool                        |
+| ---------- | --------------------------- |
+| Frontend   | React.js + Vite             |
+| Routing    | React Router 6.4+           |
+| State      | Redux Toolkit + React Query |
+| Styling    | Tailwind CSS + Shadcn UI    |
+| API Client | Axios                       |
+| Backend    | Laravel PHP (REST API)      |
+| Auth       | Laravel Sanctum / JWT       |
+| DB         | MySQL / PostgreSQL          |
 
 ---
 
@@ -111,14 +114,14 @@ php artisan serve
 
 ## 🛠 API Endpoints
 
-| Method | Endpoint             | Description            |
-|--------|----------------------|------------------------|
-| GET    | `/api/products`      | List products          |
-| GET    | `/api/products/{id}` | Product detail         |
-| POST   | `/api/cart`          | Add to cart            |
-| POST   | `/api/login`         | User login             |
-| POST   | `/api/register`      | User registration      |
-| GET    | `/api/orders`        | List user orders       |
+| Method | Endpoint             | Description       |
+| ------ | -------------------- | ----------------- |
+| GET    | `/api/products`      | List products     |
+| GET    | `/api/products/{id}` | Product detail    |
+| POST   | `/api/cart`          | Add to cart       |
+| POST   | `/api/login`         | User login        |
+| POST   | `/api/register`      | User registration |
+| GET    | `/api/orders`        | List user orders  |
 
 ---
 
