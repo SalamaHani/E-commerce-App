@@ -3,6 +3,7 @@ import { useSelector } from "react-redux";
 import { formatPrice } from "../Util";
 import { Link } from "react-router";
 import Payments from "./Payments";
+import Button from "daisyui/components/button";
 
 function CartTotal() {
   const Totalquantity = useSelector((state) => state.cartState);
@@ -53,7 +54,10 @@ function CartTotal() {
             </dl>
           </div>
 
-          <Payments />
+          {/* <Payments /> */}
+          <Button>
+            <Link to="/Checkout"></Link>
+          </Button>
 
           <div className="flex items-center justify-center gap-2">
             <span className="text-sm font-normal text-gray-500 dark:text-gray-400">
