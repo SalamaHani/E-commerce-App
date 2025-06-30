@@ -5,7 +5,13 @@ A modern, full-stack E-Commerce application built with **React.js** frontend (Vi
 ![alt text](image-1.png)
 
 ## ⚡️ Features
-
+Admin Dashboard
+🧑‍💼 User management & analytics
+📦 Product management & analytics
+🗂️ Category management & analytics
+📈 Order statistics & analytics
+✉️ Messages/communications
+🎨 App layout customization
 ### 🧑‍💻 Frontend (React)
 
 - ⚡️ Vite for fast builds
