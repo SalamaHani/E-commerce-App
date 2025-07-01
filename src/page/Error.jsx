@@ -3,12 +3,14 @@ import { useRouteError, Link } from "react-router";
 
 function Error() {
   const error = useRouteError();
-  if (error.name == "AxiosError") {
+  if (error?.name == "AxiosError") {
     return (
       <>
         <main className="grid min-h-[100vh] place-items-center px-8">
           <div className="text-center">
-            <p className="text-9xl font-semibold dark:text-red-300 text-primary">403</p>
+            <p className="text-9xl font-semibold dark:text-red-300 text-primary">
+              403
+            </p>
             <h1 className="mt-4 text-3xl font-bold  dark:text-white tracking-tight sm:text-5xl">
               not found end point
             </h1>

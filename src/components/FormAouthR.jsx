@@ -199,7 +199,7 @@ function FormAouthR() {
 
               <div>
                 <button
-                  className="flex items-center justify-center bg-black dark:bg-gray-800 w-full px-4 py-3 text-sm font-medium text-white transition rounded-lg bg-brand-500 shadow-theme-xs hover:bg-brand-600"
+                  className="flex pointer-coarse items-center justify-center bg-black dark:bg-gray-800 w-full px-4 py-3 text-sm font-medium text-white transition rounded-lg bg-brand-500 shadow-theme-xs hover:bg-brand-600"
                   type="submit"
                 >
                   Sign Up
