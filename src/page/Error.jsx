@@ -3,7 +3,7 @@ import { useRouteError, Link } from "react-router";
 
 function Error() {
   const error = useRouteError();
-  if (error?.name == "AxiosError") {
+  if (error.name == "AxiosError") {
     return (
       <>
         <main className="grid min-h-[100vh] place-items-center px-8">
