@@ -4,7 +4,7 @@ import { styled } from "styled-components";
 import { useQueryClient } from "@tanstack/react-query";
 function Compelxpagination() {
   const { meta } = useLoaderData();
-  const { current_page, last_page, total } = meta;
+  const { current_page , last_page , total } = meta;
   const { pathname, search } = useLocation();
   //   const pages = Array.from({ length: pageCount }, (_, index) => {
   //     return index + 1;
