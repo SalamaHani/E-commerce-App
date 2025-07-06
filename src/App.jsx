@@ -14,6 +14,7 @@ import SingelProduct from "./page/SingelProduct";
 import Cart from "./page/Cart";
 import Error from "./page/Error";
 import Lading from "./page/Lading";
+import NotFound from "./page/NotFound";
 import { loader as loaderfaferet } from "./page/Lading";
 import { loader as loaderproduact } from "./page/Products";
 import { loader as loaderSinglProduct } from "./page/SingelProduct";
@@ -97,6 +98,10 @@ const Router = createBrowserRouter([
         element: <Cart />,
         errorElement: <Error />,
       },
+      {
+        path: "*",
+        element: <NotFound />,
+      },
     ],
   },
 
@@ -128,11 +133,6 @@ const Router = createBrowserRouter([
     path: "/resetpassword",
     element: <ResetPassword />,
     action: resetpass(store),
-  },
-  {
-    path: "*",
-    element: <Error />,
-    ErorrElment: <Error />,
   },
 ]);
 const queryclinet = new QueryClient();

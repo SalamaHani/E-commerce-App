@@ -188,7 +188,9 @@ function ProductDeitels() {
               </div>
             </div>
           </div>
-          <SetRewive />
+          <div className="mt-5">
+            <SetRewive />
+          </div>
           <ProductsReviews reviews={reviews} />
         </div>
       </section>
