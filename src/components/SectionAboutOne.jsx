@@ -6,7 +6,7 @@ function SectionAbout() {
       <div className="container  mt-10 dark:bg-gray-900">
         <div className="lg:flex gap-8 mt-14 lg:mt-28 dark:bg-gray-900">
           <img
-            src="/public/images/aboutUs.png"
+            src="/images/aboutUs.png"
             alt="Our Company"
             loading="lazy"
             decoding="async"
@@ -53,7 +53,7 @@ function SectionAbout() {
             </p>
           </div>
           <img
-            src="/public/images/aboutUs.png"
+            src="/images/aboutUs.png"
             alt="Who We Are ?"
             loading="lazy"
             decoding="async"

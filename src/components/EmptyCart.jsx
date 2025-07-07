@@ -3,7 +3,7 @@ import { Link } from "react-router";
 function EmptyCart({Titel}) {
   return (
     <>
-      <div className="hero bg-base-200 min-h-screen dark:bg-gray-900 dark:text-white">
+      <div className="hero  min-h-screen dark:bg-gray-900 dark:text-white">
         <div className="hero-content text-center">
           <div className="max-w-md">
             <h1 className="text-5xl font-bold">Sorry  {Titel}</h1>

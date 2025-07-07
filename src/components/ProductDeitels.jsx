@@ -149,37 +149,37 @@ function ProductDeitels() {
                     Payment:
                   </h5>
                   <img
-                    src="/public/images/payment/bkash.png"
+                    src="/images/payment/bkash.png"
                     alt="Visa"
                     width="44"
                     height="32"
                   />
                   <img
-                    src="/public/images/payment/express.png"
+                    src="/images/payment/express.png"
                     alt="MasterCard"
                     width="44"
                     height="32"
                   />
                   <img
-                    src="/public/images/payment/mastercard.png"
+                    src="/images/payment/mastercard.png"
                     alt="Express"
                     width="44"
                     height="32"
                   />
                   <img
-                    src="/public/images/payment/nagad.png"
+                    src="/images/payment/nagad.png"
                     alt="Bkash"
                     width="44"
                     height="32"
                   />
                   <img
-                    src="/public/images/payment/upay.png"
+                    src="/images/payment/upay.png"
                     alt="Nagad"
                     width="44"
                     height="32"
                   />
                   <img
-                    src="/public/images/payment/visa.png"
+                    src="/images/payment/visa.png"
                     alt="Upay"
                     width="44"
                     height="32"

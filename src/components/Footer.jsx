@@ -10,7 +10,7 @@ function Footer() {
           <div className="flex flex-col md:flex-row justify-between items-center py-10 md:pt-20 md:pb-14">
             <a href="/" className="navbar-brand inline-block">
               <img
-                src="/public/images/logo.png"
+                src="/images/logo.png"
                 alt="Astrofront"
                 loading="lazy"
                 decoding="async"
@@ -20,7 +20,7 @@ function Footer() {
                 className="inline-block dark:hidden"
               />
               <img
-                src="/public/images/logo-darkmode.png"
+                src="/images/logo-darkmode.png"
                 alt="Astrofront"
                 loading="lazy"
                 decoding="async"
@@ -88,7 +88,7 @@ function Footer() {
               <li className="w-10 h-10 bg-white hover:bg-black hover:text-white dark:bg-gray-900 dark:hover:bg-white dark:hover:text-black rounded-full  flex items-center justify-center">
                 <a
                   aria-label="linkedin"
-                  href="https://www.linkedin.com/in/salama-hani-8a31b6270/?trk=public-profile-join-page"
+                  href="https://www.linkedin.com/in/salama-hani-8a31b6270/?trk-profile-join-page"
                   target="_blank"
                   rel="noopener noreferrer nofollow"
                 >

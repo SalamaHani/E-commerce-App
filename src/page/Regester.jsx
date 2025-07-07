@@ -22,7 +22,24 @@ export const action =
       toast.success("is success Register");
       return redirect("/Login");
     } catch (error) {
-      store.dispatch(seterrorsmasge(error.response.data.errors));
+      if (error.response.status == 422) {
+        toast.error(error.response.data.message, {
+          description: "Sunday, December 03, 2023 at 9:00 AM",
+          action: {
+            label: "Undo",
+            onClick: () => console.log("Undo"),
+          },
+        });
+        store.dispatch(seterrorsmasge(error.response.data.errors));
+      } else {
+        toast.error(error.response.data.message, {
+          description: "Sunday, December 03, 2023 at 9:00 AM",
+          action: {
+            label: "Undo",
+            onClick: () => console.log("Undo"),
+          },
+        });
+      }
     }
   };
 function Regester() {

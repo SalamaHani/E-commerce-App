@@ -153,7 +153,7 @@ function Header() {
             <Link to="/" className="-m-1.5 p-1.5">
               <span className="sr-only">Your Company</span>
               <img
-                src="/public/images/logo.png"
+                src="/images/logo.png"
                 alt="Astrofront"
                 loading="lazy"
                 decoding="async"
@@ -163,7 +163,7 @@ function Header() {
                 className="inline-block dark:hidden"
               ></img>
               <img
-                src="/public/images/logo-darkmode.png"
+                src="/images/logo-darkmode.png"
                 alt="Astrofront"
                 loading="lazy"
                 decoding="async"

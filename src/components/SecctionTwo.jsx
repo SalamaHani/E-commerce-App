@@ -33,7 +33,7 @@ function SecctionTwo() {
               </div>
               <div className="">
                 <img
-                  src="/public/images/call-to-action.png"
+                  src="/images/call-to-action.png"
                   className="mx-auto"
                   width="407"
                   height="385"
